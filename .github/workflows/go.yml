@@ -39,12 +39,11 @@ jobs:
     - name: Generate gRPC code of the echo.proto file 
       run: |
         protoc --go_out=./Echo --go_opt=paths=source_relative --go-grpc_out=./Echo --go-grpc_opt=paths=source_relative Echo/echo.proto
-
+    - name: Run go mod Tidy
+      run: go mod tidy
 
     - name: Check the directory of the project
       run: pwd
-    - name: Bug
-      run: go bug
     - name: Build
       run: go build -v ./...
 
