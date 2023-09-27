@@ -11,8 +11,7 @@
 # Generated protobuf and gRPC code
 *.pb.go
 # Dependencies
-/go.sum
-/go.mod
+
 # IDE-specific directories and files
 .idea/
 .vscode/
