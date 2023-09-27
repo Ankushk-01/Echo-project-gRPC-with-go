@@ -26,9 +26,11 @@ jobs:
       run: |
         sudo apt-get update -y
         sudo apt-get install -y protobuf-compiler
+
+    - name: Set Path of the protoc compiler
     - name: Install Protobuf Go Plugin
       run: |
-        go get google.golang.org/protobuf/cmd/protoc-gen-go@v1.28
+        go install google.golang.org/protobuf/cmd/protoc-gen-go@v1.28
 
     - name: Install gRPC Go Plugin 
       run: |
