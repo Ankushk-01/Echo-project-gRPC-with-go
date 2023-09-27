@@ -20,7 +20,8 @@ jobs:
       uses: actions/setup-go@v4
       with:
         go-version: '1.20'
-
+    - name: Check the directory of the project
+      run: pwd
     - name: Build
       run: go build -v ./...
 
