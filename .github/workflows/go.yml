@@ -43,6 +43,8 @@ jobs:
 
     - name: Check the directory of the project
       run: pwd
+    - name: Bug
+      run: go bug
     - name: Build
       run: go build -v ./...
 
