@@ -2,7 +2,7 @@ package main
 
 import (
 	"context"
-	pb "/Echo-project-gRPC-with-go/echo/Echo/Echo"
+	pb "echo/Echo/Echo"
 	"flag"
 	"log"
 	"time"
@@ -25,7 +25,7 @@ func main() {
 	con, err := grpc.Dial(*addr, grpc.WithTransportCredentials(insecure.NewCredentials()))
 	if err != nil {
 		log.Fatalf("Connection not Establish %v", err)
-	}else{
+	} else {
 		log.Println("Connection Established")
 	}
 	c := pb.NewEchoServiceClient(con)
@@ -38,7 +38,6 @@ func main() {
 		log.Fatalf("Echo message return an error %v", err)
 	}
 
-	log.Println("Echo : ",r.GetEchoResponse())
-	
+	log.Println("Echo : ", r.GetEchoResponse())
 
 }
