@@ -2,7 +2,7 @@ package main
 
 import (
 	"context"
-	pb "echo/Echo/Echo"
+	pb "/home/runner/work/Echo-project-gRPC-with-go/Echo-project-gRPC-with-go/echo/Echo/Echo"
 	"flag"
 	"log"
 	"time"
