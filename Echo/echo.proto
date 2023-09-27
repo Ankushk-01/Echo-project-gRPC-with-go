@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+option go_package = "echo/Echo/Echo";
+
+package Echo;
+
+message EchoRequest{
+    string echoRequest = 1;
+}
+message EchoResponse{
+    string echoResponse = 1;
+}
+
+service EchoService {
+    rpc Echo(EchoRequest)returns (EchoResponse){}
+}
