@@ -2,7 +2,7 @@ package main
 
 import (
 	"context"
-	pb "echo/Echo/Echo"
+	pb "echo/Echo/protobuf"
 	"flag"
 	"log"
 	"time"
