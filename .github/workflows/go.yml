@@ -42,8 +42,10 @@ jobs:
         protoc --go_out=. --go-grpc_out=. echo.proto
         ls -a
 
-        cd echo 
+        cd ./echo 
         pwd
+        ls -a
+        cd ./Echo
         ls -a
     - name: files at that time
       run: |
