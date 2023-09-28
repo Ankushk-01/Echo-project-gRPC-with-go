@@ -22,45 +22,13 @@ jobs:
         go-version: '1.20'
     - name: Verify Go version
       run: go version # Verify the Go installation and version.
-    - name: Install protoc
-      run: |
-        sudo apt-get update -y
-        sudo apt-get install -y protobuf-compiler
-
-    - name: Set Path of the protoc compiler
-      run: export PATH=$PATH:$GOPATH/bin
-    - name: Install Protobuf Go Plugin
-      run: |
-        go install google.golang.org/protobuf/cmd/protoc-gen-go@v1.28
-
-    - name: Install gRPC Go Plugin 
-      run: |
-        go install google.golang.org/grpc/cmd/protoc-gen-go-grpc@v1.2
-    - name: Generate gRPC code of the echo.proto file 
-      run: |
-        cd ./Echo
-        protoc --go_out=. --go-grpc_out=. echo.proto
-        ls -a
-
-        cd ./echo 
-        pwd
-        ls -a
-        cd ./Echo
-        ls -a
-    - name: files at that time
-      run: |
-        ls -a
-        cd ./Echo
-        ls -a
-        cd echo
-        ls -a
     - name: Run go mod Tidy
       run: go mod tidy
 
     - name: Check the directory of the project
       run: pwd
     - name: Build
-      run: go build -v ./...
+      run: go build -o bin/server.exe server/main.go
 
     - name: Test
       run: go test -v ./...
