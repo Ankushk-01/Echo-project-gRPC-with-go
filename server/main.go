@@ -7,7 +7,7 @@ import (
 	"log"
 	"net"
 
-	pb "/echo/Echo/Echo"
+	pb "echo/Echo/protobuf"
 
 	"google.golang.org/grpc"
 )

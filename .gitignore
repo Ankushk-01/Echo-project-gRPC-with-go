@@ -9,7 +9,6 @@
 /test_results/
 
 # Generated protobuf and gRPC code
-*.pb.go
 # Dependencies
 
 # IDE-specific directories and files
