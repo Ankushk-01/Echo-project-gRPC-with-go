@@ -2,8 +2,9 @@ name: Go
 
 on:
   push:
-      tags:
-        - "grpc-echo*"
+    branches: [ main2 ]
+  pull_request:
+    branches: [ main2 ]
 
 jobs:
 
