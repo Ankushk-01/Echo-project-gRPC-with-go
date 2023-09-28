@@ -39,6 +39,8 @@ jobs:
     - name: Generate gRPC code of the echo.proto file 
       run: |
         protoc --go_out=./Echo --go_opt=paths=source_relative --go-grpc_out=./Echo --go-grpc_opt=paths=source_relative Echo/echo.proto
+        cd ./Echo
+        ls -a
     - name: files at that time
       run: |
         ls -a
