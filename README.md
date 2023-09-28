@@ -70,3 +70,5 @@ open the `CMD` run the following
 `client.exe -echo <Message>`
 
 You will recieve the same message from the Server
+
+protoc --go_out=./Echo --go_opt=paths=source_relative --go-grpc_out=./Echo --go-grpc_opt=paths=source_relative Echo/echo.proto

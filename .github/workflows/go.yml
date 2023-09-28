@@ -41,7 +41,6 @@ jobs:
         cd ./Echo
         protoc --go_out=. --go-grpc_out=. echo.proto
         ls -a
-        protoc --go_out=./Echo --go_opt=paths=source_relative --go-grpc_out=./Echo --go-grpc_opt=paths=source_relative Echo/echo.proto
     - name: files at that time
       run: |
         ls -a
